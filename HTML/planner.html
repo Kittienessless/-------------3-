@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/planner.css" type="text/css" />
+  <link rel="stylesheet" href="../CSS/media.css" type="text/css" />
+  <link rel="stylesheet" href="../CSS/reset.css" type="text/css" />
+  <link rel="stylesheet" href="../CSS/create_project_popup.css" type="text/css" />
+  <link rel="stylesheet" href="../CSS/edit_task.css" type="text/css" />
+  <link rel="stylesheet" href="../CSS/login_register.css" type="text/css" />
+
+  <link rel="icon" href="../icons/icon.png" type="image/x-icon">
+
+  <title>DOO - Day</title>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="main_header">
+      <div class="row_main_menu">
+        <div class="Account_block">
+          <div class="account_pic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_2127_8914" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="4" y="14" width="16"
+                height="8">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4 14.4961H19.8399V21.8701H4V14.4961Z" fill="white" />
+              </mask>
+              <g mask="url(#mask0_2127_8914)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.921 15.9961C7.66 15.9961 5.5 16.7281 5.5 18.1731C5.5 19.6311 7.66 20.3701 11.921 20.3701C16.181 20.3701 18.34 19.6381 18.34 18.1931C18.34 16.7351 16.181 15.9961 11.921 15.9961M11.921 21.8701C9.962 21.8701 4 21.8701 4 18.1731C4 14.8771 8.521 14.4961 11.921 14.4961C13.88 14.4961 19.84 14.4961 19.84 18.1931C19.84 21.4891 15.32 21.8701 11.921 21.8701"
+                  fill="black" />
+              </g>
+              <mask id="mask1_2127_8914" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="2" width="12"
+                height="11">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.60986 2H17.2299V12.6186H6.60986V2Z" fill="white" />
+              </mask>
+              <g mask="url(#mask1_2127_8914)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.9209 3.42751C9.77989 3.42751 8.03789 5.16851 8.03789 7.30951C8.03089 9.44351 9.75989 11.1835 11.8919 11.1915L11.9209 11.9055V11.1915C14.0609 11.1915 15.8019 9.44951 15.8019 7.30951C15.8019 5.16851 14.0609 3.42751 11.9209 3.42751M11.9209 12.6185H11.8889C8.9669 12.6095 6.59989 10.2265 6.60989 7.30651C6.60989 4.38151 8.99189 1.99951 11.9209 1.99951C14.8489 1.99951 17.2299 4.38151 17.2299 7.30951C17.2299 10.2375 14.8489 12.6185 11.9209 12.6185"
+                  fill="black" />
+              </g>
+            </svg></div>
+          <div class="acc_name">
+            DFGdsgsdf
+          </div>
+        </div>
+      </div>
+      <div class="account_shop_menu">
+        <div class="row_main_menu_sett">
+          <div class="nav">
+            <ul>
+              <li>
+                <div class="block">
+                  <div>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_2127_8950" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="3" y="1"
+                        width="19" height="18">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 1H21.4969V18.348H3V1Z" fill="white" />
+                      </mask>
+                      <g mask="url(#mask0_2127_8950)">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12.247 2.5C8.75201 2.5 6.31601 5.238 6.31601 7.695C6.31601 9.774 5.73901 10.735 5.22901 11.583C4.82001 12.264 4.49701 12.802 4.49701 13.971C4.66401 15.857 5.90901 16.848 12.247 16.848C18.55 16.848 19.834 15.813 20 13.906C19.997 12.802 19.674 12.264 19.265 11.583C18.755 10.735 18.178 9.774 18.178 7.695C18.178 5.238 15.742 2.5 12.247 2.5M12.247 18.348C7.57101 18.348 3.34501 18.018 3.00001 14.035C2.99701 12.387 3.50001 11.549 3.94401 10.811C4.39301 10.063 4.81601 9.358 4.81601 7.695C4.81601 4.462 7.80201 1 12.247 1C16.692 1 19.678 4.462 19.678 7.695C19.678 9.358 20.101 10.063 20.55 10.811C20.994 11.549 21.497 12.387 21.497 13.971C21.148 18.018 16.923 18.348 12.247 18.348"
+                          fill="black" />
+                      </g>
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.198 22.5001H12.196C11.075 22.4991 10.014 22.0051 9.20903 21.1081C8.93203 20.8011 8.95703 20.3261 9.26503 20.0501C9.57303 19.7721 10.047 19.7971 10.324 20.1061C10.842 20.6831 11.507 21.0001 12.197 21.0001H12.198C12.891 21.0001 13.559 20.6831 14.078 20.1051C14.356 19.7981 14.83 19.7731 15.137 20.0501C15.445 20.3271 15.47 20.8021 15.193 21.1091C14.385 22.0061 13.322 22.5001 12.198 22.5001"
+                        fill="black" />
+                    </svg>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                  <div>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 3.5C7.313 3.5 3.5 7.313 3.5 12C3.5 16.687 7.313 20.5 12 20.5C16.687 20.5 20.5 16.687 20.5 12C20.5 7.313 16.687 3.5 12 3.5M12 22C6.486 22 2 17.514 2 12C2 6.486 6.486 2 12 2C17.514 2 22 6.486 22 12C22 17.514 17.514 22 12 22"
+                        fill="black" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15.4311 15.6925C15.3001 15.6925 15.1681 15.6585 15.0471 15.5875L11.2771 13.3385C11.0511 13.2025 10.9111 12.9575 10.9111 12.6935V7.84546C10.9111 7.43146 11.2471 7.09546 11.6611 7.09546C12.0761 7.09546 12.4111 7.43146 12.4111 7.84546V12.2675L15.8161 14.2975C16.1711 14.5105 16.2881 14.9705 16.0761 15.3265C15.9351 15.5615 15.6861 15.6925 15.4311 15.6925"
+                        fill="black" />
+                    </svg>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                  <div>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_2127_8851" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2" y="2"
+                        width="20" height="20">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 2H21.4768V21.477H2V2Z" fill="white" />
+                      </mask>
+                      <g mask="url(#mask0_2127_8851)">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M11.7388 3.5C7.19576 3.5 3.49976 7.195 3.49976 11.738C3.49976 16.281 7.19576 19.977 11.7388 19.977C16.2808 19.977 19.9768 16.281 19.9768 11.738C19.9768 7.195 16.2808 3.5 11.7388 3.5M11.7388 21.477C6.36876 21.477 1.99976 17.108 1.99976 11.738C1.99976 6.368 6.36876 2 11.7388 2C17.1088 2 21.4768 6.368 21.4768 11.738C21.4768 17.108 17.1088 21.477 11.7388 21.477"
+                          fill="black" />
+                      </g>
+                      <mask id="mask1_2127_8851" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="17" y="17"
+                        width="6" height="6">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.24 17.707H22.264V22.7218H17.24V17.707Z"
+                          fill="white" />
+                      </mask>
+                      <g mask="url(#mask1_2127_8851)">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.5142 22.7218C21.3232 22.7218 21.1312 22.6488 20.9842 22.5028L17.4602 18.9888C17.1672 18.6958 17.1662 18.2208 17.4592 17.9278C17.7512 17.6328 18.2262 17.6348 18.5202 17.9258L22.0442 21.4408C22.3372 21.7338 22.3382 22.2078 22.0452 22.5008C21.8992 22.6488 21.7062 22.7218 21.5142 22.7218"
+                          fill="black" />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="block">
+                  <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.665 3.5C5.135 3.5 3.5 5.233 3.5 7.916V16.084C3.5 18.767 5.135 20.5 7.665 20.5H16.333C18.864 20.5 20.5 18.767 20.5 16.084V7.916C20.5 5.233 18.864 3.5 16.334 3.5H7.665ZM16.333 22H7.665C4.276 22 2 19.622 2 16.084V7.916C2 4.378 4.276 2 7.665 2H16.334C19.723 2 22 4.378 22 7.916V16.084C22 19.622 19.723 22 16.333 22V22Z"
+                        fill="black" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15.9481 13.0137C15.3951 13.0137 14.9431 12.5667 14.9431 12.0137C14.9431 11.4607 15.3861 11.0137 15.9381 11.0137H15.9481C16.5011 11.0137 16.9481 11.4607 16.9481 12.0137C16.9481 12.5667 16.5011 13.0137 15.9481 13.0137"
+                        fill="black" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11.9386 13.0137C11.3856 13.0137 10.9346 12.5667 10.9346 12.0137C10.9346 11.4607 11.3766 11.0137 11.9296 11.0137H11.9386C12.4916 11.0137 12.9386 11.4607 12.9386 12.0137C12.9386 12.5667 12.4916 13.0137 11.9386 13.0137"
+                        fill="black" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.9298 13.0137C7.3768 13.0137 6.9248 12.5667 6.9248 12.0137C6.9248 11.4607 7.3678 11.0137 7.9208 11.0137H7.9298C8.4828 11.0137 8.9298 11.4607 8.9298 12.0137C8.9298 12.5667 8.4828 13.0137 7.9298 13.0137"
+                        fill="black" />
+                    </svg></div>
+              </li>
+              <li>
+                <div class="block">
+                  <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16.577 22.3686H7.753C4.312 22.3686 2 19.9536 2 16.3596V8.04562C2 4.45162 4.312 2.03662 7.753 2.03662H11.492C11.906 2.03662 12.242 2.37262 12.242 2.78662C12.242 3.20062 11.906 3.53662 11.492 3.53662H7.753C5.169 3.53662 3.5 5.30662 3.5 8.04562V16.3596C3.5 19.0986 5.169 20.8686 7.753 20.8686H16.577C19.161 20.8686 20.831 19.0986 20.831 16.3596V12.3316C20.831 11.9176 21.167 11.5816 21.581 11.5816C21.995 11.5816 22.331 11.9176 22.331 12.3316V16.3596C22.331 19.9536 20.018 22.3686 16.577 22.3686"
+                        fill="black" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8.86762 15.4282H11.8446C12.2246 15.4282 12.5806 15.2812 12.8496 15.0122L20.3586 7.50324C20.6666 7.19524 20.8366 6.78524 20.8366 6.34924C20.8366 5.91224 20.6666 5.50124 20.3586 5.19324L19.1416 3.97624C18.5046 3.34124 17.4686 3.34124 16.8306 3.97624L9.35762 11.4492C9.09862 11.7082 8.95162 12.0522 8.94262 12.4172L8.86762 15.4282ZM11.8446 16.9282H8.09862C7.89662 16.9282 7.70262 16.8462 7.56162 16.7012C7.42062 16.5572 7.34362 16.3622 7.34862 16.1592L7.44262 12.3802C7.46162 11.6282 7.76462 10.9212 8.29662 10.3882H8.29762L15.7706 2.91524C16.9926 1.69524 18.9796 1.69524 20.2016 2.91524L21.4186 4.13224C22.0116 4.72424 22.3376 5.51124 22.3366 6.34924C22.3366 7.18724 22.0106 7.97324 21.4186 8.56424L13.9096 16.0732C13.3586 16.6242 12.6246 16.9282 11.8446 16.9282V16.9282Z"
+                        fill="black" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M19.7308 9.9166C19.5388 9.9166 19.3468 9.8436 19.2008 9.6966L14.6348 5.1306C14.3418 4.8376 14.3418 4.3626 14.6348 4.0696C14.9278 3.7766 15.4018 3.7766 15.6948 4.0696L20.2608 8.6366C20.5538 8.9296 20.5538 9.4036 20.2608 9.6966C20.1148 9.8436 19.9228 9.9166 19.7308 9.9166"
+                        fill="black" />
+                    </svg></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+
+  <main>
+    <div class="main_container">
+      <div class="main_view">
+        <div class="side_bar_pannel">
+          <div class="side_bar_container row_view">
+            <div class="_tasks choosed_task">Search</div>
+            <div class="_tasks">Todays</div>
+            <div class="_tasks">All</div>
+            <div class="projects_container ">
+              <div class="row_projects_header">
+                <div class="project_header">Projects</div>
+                <div class="projects_additing_btn" id="add_project_btn">
+                  <div>
+                    <button>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M11.75 16.1544C11.336 16.1544 11 15.8184 11 15.4044V8.07739C11 7.66339 11.336 7.32739 11.75 7.32739C12.164 7.32739 12.5 7.66339 12.5 8.07739V15.4044C12.5 15.8184 12.164 16.1544 11.75 16.1544"
+                          fill="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M15.4165 12.4902H8.0835C7.6685 12.4902 7.3335 12.1542 7.3335 11.7402C7.3335 11.3262 7.6685 10.9902 8.0835 10.9902H15.4165C15.8305 10.9902 16.1665 11.3262 16.1665 11.7402C16.1665 12.1542 15.8305 12.4902 15.4165 12.4902"
+                          fill="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M7.064 2.5C4.292 2.5 2.5 4.397 2.5 7.335V16.165C2.5 19.103 4.292 21 7.064 21H16.436C19.209 21 21 19.103 21 16.165V7.335C21 4.397 19.209 2.5 16.436 2.5H7.064ZM16.436 22.5H7.064C3.437 22.5 1 19.954 1 16.165V7.335C1 3.546 3.437 1 7.064 1H16.436C20.063 1 22.5 3.546 22.5 7.335V16.165C22.5 19.954 20.063 22.5 16.436 22.5V22.5Z"
+                          fill="black" />
+                      </svg>
+                    </button>
+
+                  </div>
+
+
+                </div>
+              </div>
+              <ul class="list_of_projects">
+
+              </ul>
+
+
+
+            </div>
+
+
+
+            <div class="social_media_links">
+              <div class="socials">
+                <div>
+                  <svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                    <title>twitter [#154]</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Dribbble-Light-Preview" transform="translate(-60.000000, -7521.000000)" fill="#000000">
+                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                          <path
+                            d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705"
+                            id="twitter-[#154]"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="socials">
+                <div>
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.962 511.962"
+                    style="enable-background:new 0 0 511.962 511.962;" xml:space="preserve">
+                    <path style="fill:#1E88E5;" d="M250.503,400.807h30.592c0,0,9.248-1.024,13.952-6.112c4.352-4.672,4.192-13.44,4.192-13.44
+	s-0.608-41.056,18.464-47.104c18.784-5.952,42.912,39.68,68.48,57.248c19.328,13.28,34.016,10.368,34.016,10.368l68.384-0.96
+	c0,0,35.776-2.208,18.816-30.336c-1.376-2.304-9.888-20.8-50.848-58.816c-42.88-39.808-37.12-33.344,14.528-102.176
+	c31.456-41.92,44.032-67.52,40.096-78.464c-3.744-10.432-26.88-7.68-26.88-7.68l-76.928,0.448c0,0-5.696-0.768-9.952,1.76
+	c-4.128,2.496-6.784,8.256-6.784,8.256s-12.192,32.448-28.448,60.032c-34.272,58.208-48,61.28-53.6,57.664
+	c-13.024-8.416-9.76-33.856-9.76-51.904c0-56.416,8.544-79.936-16.672-86.016c-8.384-2.016-14.528-3.36-35.936-3.584
+	c-27.456-0.288-50.72,0.096-63.872,6.528c-8.768,4.288-15.52,13.856-11.392,14.4c5.088,0.672,16.608,3.104,22.72,11.424
+	c7.904,10.72,7.616,34.848,7.616,34.848s4.544,66.4-10.592,74.656c-10.4,5.664-24.64-5.888-55.2-58.72
+	c-15.648-27.04-27.488-56.96-27.488-56.96s-2.272-5.568-6.336-8.544c-4.928-3.616-11.84-4.768-11.84-4.768l-73.152,0.448
+	c0,0-10.976,0.32-15.008,5.088c-3.584,4.256-0.288,13.024-0.288,13.024s57.28,133.984,122.112,201.536
+	C182.983,404.871,250.503,400.807,250.503,400.807L250.503,400.807z" />
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <div class="socials">
+                <div>
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-46.0041" y1="634.1208"
+                      x2="-32.9334" y2="647.1917" gradientTransform="matrix(32 0 0 -32 1519 20757)">
+                      <stop offset="0" style="stop-color:#FFC107" />
+                      <stop offset="0.507" style="stop-color:#F44336" />
+                      <stop offset="0.99" style="stop-color:#9C27B0" />
+                    </linearGradient>
+                    <path style="fill:url(#SVGID_1_);" d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192
+                 c88.352,0,160-71.648,160-160V160C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112
+                 V160C48,98.24,98.24,48,160,48h192c61.76,0,112,50.24,112,112V352z" />
+                    <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-42.2971" y1="637.8279"
+                      x2="-36.6404" y2="643.4846" gradientTransform="matrix(32 0 0 -32 1519 20757)">
+                      <stop offset="0" style="stop-color:#FFC107" />
+                      <stop offset="0.507" style="stop-color:#F44336" />
+                      <stop offset="0.99" style="stop-color:#9C27B0" />
+                    </linearGradient>
+                    <path style="fill:url(#SVGID_2_);" d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128
+                 S326.688,128,256,128z M256,336c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80
+                 C336,300.096,300.096,336,256,336z" />
+                    <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-35.5456" y1="644.5793"
+                      x2="-34.7919" y2="645.3331" gradientTransform="matrix(32 0 0 -32 1519 20757)">
+                      <stop offset="0" style="stop-color:#FFC107" />
+                      <stop offset="0.507" style="stop-color:#F44336" />
+                      <stop offset="0.99" style="stop-color:#9C27B0" />
+                    </linearGradient>
+                    <circle style="fill:url(#SVGID_3_);" cx="393.6" cy="118.4" r="17.056" />
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                  </svg>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="tasks_main_view">
+          <div class="header_tasks">Todays</div>
+          <div class="calendar_view">Calendar</div>
+          <div class="today_task_container">
+            <div class="task_creation form_creation">
+              <form action="#" id="todo_form">
+                <input type="text" placeholder="Type task here" autofocus>
+              </form>
+
+            </div>
+
+            <div class="scollable_todos">
+              <ul class="todos">
+
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </main>
+
+
+
+
+
+
+
+  <footer>
+
+  </footer>
+
+
+
+
+  <div class="bg_modal_create_project">
+    <div class="modal_content">
+      <div class="create_project">
+        <div class=" project_creation_form">
+          <div>
+            <form action="#" id="create_project_form">
+              <input type="text" placeholder="type name of the project here" autofocus>
+            </form>
+          </div>
+        </div>
+        <div>
+          <button id="add_project">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M11.75 16.1544C11.336 16.1544 11 15.8184 11 15.4044V8.07739C11 7.66339 11.336 7.32739 11.75 7.32739C12.164 7.32739 12.5 7.66339 12.5 8.07739V15.4044C12.5 15.8184 12.164 16.1544 11.75 16.1544"
+                fill="black" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M15.4165 12.4902H8.0835C7.6685 12.4902 7.3335 12.1542 7.3335 11.7402C7.3335 11.3262 7.6685 10.9902 8.0835 10.9902H15.4165C15.8305 10.9902 16.1665 11.3262 16.1665 11.7402C16.1665 12.1542 15.8305 12.4902 15.4165 12.4902"
+                fill="black" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M7.064 2.5C4.292 2.5 2.5 4.397 2.5 7.335V16.165C2.5 19.103 4.292 21 7.064 21H16.436C19.209 21 21 19.103 21 16.165V7.335C21 4.397 19.209 2.5 16.436 2.5H7.064ZM16.436 22.5H7.064C3.437 22.5 1 19.954 1 16.165V7.335C1 3.546 3.437 1 7.064 1H16.436C20.063 1 22.5 3.546 22.5 7.335V16.165C22.5 19.954 20.063 22.5 16.436 22.5V22.5Z"
+                fill="black" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="close_btn" id="close_x">
+      <div>
+        <button>
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 60.963 60.842" style="enable-background:new 0 0 60.963 60.842;"
+            xml:space="preserve">
+            <path style="fill:#231F20;" d="M59.595,52.861L37.094,30.359L59.473,7.98c1.825-1.826,1.825-4.786,0-6.611
+         c-1.826-1.825-4.785-1.825-6.611,0L30.483,23.748L8.105,1.369c-1.826-1.825-4.785-1.825-6.611,0c-1.826,1.826-1.826,4.786,0,6.611
+         l22.378,22.379L1.369,52.861c-1.826,1.826-1.826,4.785,0,6.611c0.913,0.913,2.109,1.369,3.306,1.369s2.393-0.456,3.306-1.369
+         l22.502-22.502l22.501,22.502c0.913,0.913,2.109,1.369,3.306,1.369s2.393-0.456,3.306-1.369
+         C61.42,57.647,61.42,54.687,59.595,52.861z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg_modal_edit_task">
+    <div class="edit_task_modal_content">
+
+    </div>
+    <div class="close_edit" id="close"></div>
+  </div>
+
+  <div class="bg_modal_login">
+    <div class="modal_login_content">
+      <div class="login_container">
+        <div class="wr">
+          <form action="">
+            <div class="input">
+              <input type="text" placeholder="Username" required>
+            </div>
+            <div class="input">
+              <input type="password" placeholder="Password" required>
+            </div>
+            <div class="remember-forgot">
+              <label ><input type="checkbox">Remember</label>
+              <a href="#">Forgot password?</a>
+            </div>
+
+            <button><a href="index.html">Submit</a></button>
+            <div class="register-link">
+              Don't have an account? <a href="Register.html">Register</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="close_btn" id="close_x">
+      <div>
+        <button>
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 60.963 60.842" style="enable-background:new 0 0 60.963 60.842;"
+            xml:space="preserve">
+            <path style="fill:#231F20;" d="M59.595,52.861L37.094,30.359L59.473,7.98c1.825-1.826,1.825-4.786,0-6.611
+         c-1.826-1.825-4.785-1.825-6.611,0L30.483,23.748L8.105,1.369c-1.826-1.825-4.785-1.825-6.611,0c-1.826,1.826-1.826,4.786,0,6.611
+         l22.378,22.379L1.369,52.861c-1.826,1.826-1.826,4.785,0,6.611c0.913,0.913,2.109,1.369,3.306,1.369s2.393-0.456,3.306-1.369
+         l22.502-22.502l22.501,22.502c0.913,0.913,2.109,1.369,3.306,1.369s2.393-0.456,3.306-1.369
+         C61.42,57.647,61.42,54.687,59.595,52.861z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="bg_modal_register">
+    <div class="modal_register_content">
+      <div class="register_container">
+
+        <div class="form-container">
+          <form action="#" class="form">
+            <div class="input-box">
+              <label>Login</label>
+              <input type="text" placeholder="Enter your login" required>
+            </div>
+            <div class="input-box">
+              <label>Password</label>
+              <input type="password" placeholder="Enter password" required>
+            </div>
+            <div class="input-box">
+              <label>Password</label>
+              <input type="password" placeholder="Enter password again" required>
+            </div>
+            <div class="input-box">
+              <label>Name</label>
+              <input type="text" placeholder="Enter name" required>
+            </div>
+            <div class="input-box">
+              <label>Email Address</label>
+              <input type="email" placeholder="Enter email address" required>
+            </div>
+
+            <div class="column">
+              <div class="input-box">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter phone number" required>
+              </div>
+              <div class="input-box">
+                <label>Birth Date</label>
+                <input type="date" placeholder="Enter birth date" required>
+              </div>
+            </div>
+
+            <div class="gender-box">
+              <h3>Gender</h3>
+              <div class="gender-option">
+                <div class="gender">
+                  <input type="radio" id="check-male" name="gender" checked>
+                  <label for="check-male">Male</label>
+                </div>
+                <div class="gender">
+                  <input type="radio" id="check-fem" name="gender" checked>
+                  <label for="check-fem">Female</label>
+                </div>
+                <div class="gender">
+                  <input type="radio" id="check-oth" name="gender" checked>
+                  <label for="check-oth">Prefer not to say</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-box address">
+              <label>Address</label>
+              <input type="text" placeholder="Enter street address" required>
+              <div class="column">
+                <div class="selection-box">
+                  <select name="" id="">
+                    <option value="" hidden>Country</option>
+
+                    <option value="">Russia</option>
+                    <option value="">United States of America</option>
+                    <option value="">Japan</option>
+                    <option value="">German</option>
+                    <option value="">France</option>
+                    <option value="">Poland</option>
+
+                  </select>
+                </div>
+                <input type="text" placeholder="Enter your city" required>
+
+              </div>
+              <div class="column">
+                <input type="text" placeholder="Enter your region" required>
+                <input type="number" placeholder="Enter postal code" required>
+              </div>
+
+
+            </div>
+
+          
+
+
+
+            <button><a href="index.html">Submit</a></button>
+
+
+
+          </form>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../JS/planner_today_todo.js"></script>
+  <script src="../JS/planner_projects_add.js"></script>
+  <script src="../JS/open_projects.js"></script>
+  <script src="../JS/account_settings.js"></script>
+  <script src="../JS/edit_task.js"></script>
+  <script src="../JS/notifications.js"></script>
+  <script src="../JS/searching.js"></script>
+  <script src="../JS/create_projects.js"></script>
+
+</body>
+
+</html>

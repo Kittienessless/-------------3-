@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.work-sans-font {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+::-webkit-scrollbar-thumb {
+  background: #eaf2fd;
+  border-radius: 10px;
+  border: 0.25em solid rgb(229, 240, 253);
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+  margin-block: 0.5em;
+}
+
+div {
+  display: block;
+}
+
+body {
+  background-color: #f7f9fc;
+  font-family: "roboto-light";
+  color: rgb(27, 27, 27);
+  line-height: 1.3333;
+}
+
+header {
+  height: 80;
+  width: 100%;
+  background-color: #f5f5f5;
+  display: block;
+}
+main {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.header_container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfdfdf;
+
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.nav ul {
+  display: flex;
+
+  list-style-type: none;
+}
+.nav li + li {
+  margin-left: 20px;
+}
+.nav a {
+  color: rgb(0, 0, 0);
+  opacity: 0.7;
+  text-decoration: none;
+  font-family: "Gilda ";
+  font-size: 18px;
+  font-weight: 500;
+  transition: opacity 0.2s ease-in;
+}
+.nav button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-family: "Gilda ";
+  font-size: 18px;
+  font-weight: 500;
+  transition: opacity 0.2s ease-in;
+  opacity: 0.7;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+.nav button:hover {
+  opacity: 1;
+}
+
+.additionally_settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.block {
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+}
+
+.row_main_menu_sett {
+  display: flex;
+  padding: 8px;
+  background-color: rgb(228, 228, 228);
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+}
+
+svg:hover {
+  fill: azure;
+}
+.Account_block {
+  padding: 10px;
+  height: 40px;
+  width: max-content;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 22px;
+}
+.row_main_menu {
+  padding: 8px;
+  border-radius: 12px;
+  width: max-content;
+}
+.account_pic {
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.main_container {
+  width: 100%;
+  height: 100%;
+}
+.main_view {
+  display: flex;
+  position: relative;
+}
+.side_bar_pannel {
+  display: inline-block;
+  height: 100%;
+  width: 400px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  margin-right: 10px;
+  border-right: 1px solid #dfdfdf;
+  z-index: 10;
+  overflow: hidden;
+}
+.side_bar_container {
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+}
+.row_view {
+  display: flex;
+  flex-direction: column;
+}
+._tasks {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.choosed_task {
+  background-color: rgb(216, 216, 216);
+}
+._tasks:hover {
+  background-color: #f1f1f1;
+}
+
+.projects_container {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  overflow-y: scroll;
+  height: 750px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: auto;
+}
+.row_projects_header {
+  height: 30px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.project_header {
+  font-size: 18px;
+}
+.projects_additing_btn {
+  padding: 5px;
+  cursor: pointer;
+}
+.project_item {
+  height: 30px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  cursor: pointer;
+}
+.choosed_project_item {
+  background-color: rgb(216, 216, 216);
+}
+.project_item:hover {
+  background-color: #f1f1f1;
+}
+
+.project_pic {
+  margin-right: 10px;
+}
+.project_name {
+  overflow: hidden;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.social_media_links {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.socials {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.tasks_main_view {
+  margin-right: 10px;
+  display: inline-block;
+  margin-left: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.header_tasks {
+  height: 90px;
+  background-color: rgb(255, 255, 255);
+  font-size: 50px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.calendar_view {
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(255, 255, 255);
+}
+.today_task_container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  background-color: #dce9fc;
+  height: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 50px;
+
+  margin-bottom: 50x;
+}
+.task_creation {
+  border-radius: 20px;
+  height: 50px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+.form_creation form input {
+  align-items: center;
+  padding: 3px;
+  margin: 12px;
+  width: 700px;
+  outline: none;
+}
+.scollable_todos {
+  height: calc(100% - 80px);
+  width: 100%;
+  overflow-y: auto;
+}
+
+.task_btn_task {
+  margin-left: 20px;
+  padding: 5px;
+  align-items: center;
+  opacity: 0.2;
+}
+.todos {
+  height: auto;
+  width: calc(100% - 15px);
+}
+.todos ul li {
+  margin-bottom: 10px;
+}
+.task_btn_task:hover {
+  opacity: 1;
+}
+
+.task_box {
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  max-height: fit-content;
+  background-color: #f1f1f1;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px solid #8299b9;
+  border-radius: 10px;
+}
+.task_main {
+  margin: 10px;
+  padding: 2px;
+}
+.task_main span {
+  text-wrap: nowrap;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+.row {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+.task_btn_task div input {
+  gap: 0.75rem;
+}
+ .todos li.complete {
+  text-decoration: line-through;
+} 
+.task_container{
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+  border: 2px solid gray;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+input[type="checkbox"]::before {
+  content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.86309 17.9999C9.72651 18 9.59136 17.9721 9.46598 17.9179C9.3406 17.8637 9.22765 17.7844 9.13409 17.6849L4.27109 12.5059C4.09798 12.3113 4.00765 12.0568 4.01931 11.7966C4.03098 11.5364 4.14372 11.291 4.33356 11.1126C4.52339 10.9342 4.77533 10.837 5.03577 10.8415C5.29621 10.8461 5.5446 10.9521 5.72809 11.1369L9.85309 15.5279L18.2611 6.32794C18.3488 6.22815 18.4556 6.14685 18.5751 6.08879C18.6946 6.03073 18.8245 5.99707 18.9572 5.98979C19.0899 5.9825 19.2227 6.00173 19.3478 6.04634C19.473 6.09096 19.588 6.16008 19.6862 6.24966C19.7843 6.33923 19.8636 6.44747 19.9195 6.56804C19.9753 6.68862 20.0066 6.81911 20.0114 6.9519C20.0162 7.08469 19.9945 7.21711 19.9476 7.34143C19.9007 7.46574 19.8295 7.57946 19.7381 7.67594L10.6011 17.6759C10.5081 17.7773 10.3952 17.8584 10.2694 17.9142C10.1436 17.9699 10.0077 17.9991 9.87009 17.9999H9.86309Z' fill='black'/%3E%3C/svg%3E%0A");
+  transform: scale(0);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+input[type="checkbox"]:checked {
+  background-color: rgba(200, 235, 255, 0.979);
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(.9);
+}
+.todos li button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.todos li button svg path {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.todos li button:hover svg path {
+  stroke: rgb(78, 78, 78);
+}
+.todos li button:active svg {
+  transform: scale(0.8);
+}
+
+.todos li span {
+  padding: 2px;
+  border-radius: 2px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.todos li span:focus {
+  background-color: #d4e5ff;
+  outline: none;
+}
+.todos li span[contenteditable]:hover {
+  background-color: #d4e5ff;
+}

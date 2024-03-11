@@ -1,0 +1,264 @@
+
+
+.bg_modal_login {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 1, 0.568);
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  display: none;
+}
+.bg_modal_register{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 1, 0.568);
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  display: none;
+  border-radius: 20px;
+}
+.modal_login_content{
+  height: 800px;
+  width: 800px;
+  background-color: #f2fbff;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 20px;
+}
+.modal_register_content{
+  height: 100vh;
+  width: 800px;
+  background-color: #f2fbff;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+}
+.close_btn {
+  position: relative;
+   margin-top: -821px;
+   margin-left: 12px;
+ }
+.login_container {
+  margin-top: 50px;
+}
+
+.wr {
+
+  height: 500px;
+  width: 500px;
+  display: flex;
+  position: relative;
+  padding: 25px;
+}
+
+.wr .input {
+  width: 400px;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  padding: 20px 45px 20px 20px;
+}
+.input input ::placeholder {
+  color: #026958;
+}
+
+.input i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.wr .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  margin: 10px 0 15px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.remember-forgot label input {
+  accent-color: #026958;
+  margin-right: 2px;
+}
+
+.remember-forgot a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.wr button {
+  width: 100%;
+  height: 60px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  margin-top: 25px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in;
+}
+.wr button:hover {
+  box-shadow: 2px 2px white, 4px 4px #026958;
+  transform: translate(-2px, -2px);
+}
+
+.wr button a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.wr .register-link a:hover {
+  text-decoration: underline;
+  color: #026958;
+}
+
+.wr .register-link {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+}
+.input input:focus {
+  box-shadow: 1px 1px 0 #026958;
+}
+
+.register_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+
+
+
+
+.form-container {
+  width: 500px;
+  display: flex;
+  position: relative;
+  padding: 30px;
+  
+}
+
+.form-container .input-box {
+  width: 100%;
+  margin-top: 20px;
+
+}
+
+.input-box label {
+  color: #333;
+}
+
+.form :where(.input-box input, .selection-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: #707070;
+}
+
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+
+
+.gender input {
+  accent-color: #026958;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.form :where(.terms label) {
+  cursor: pointer;
+  accent-color: #026958;
+}
+
+.selection-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 17px;
+}
+
+.address :where(input, .selection-box) {
+  margin-top: 15px;
+}
+
+.form button {
+  width: 440px;
+  height: 60px;
+  background-color: black;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  margin-top: 25px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in;
+}
+
+.form button:hover {
+  box-shadow: 2px 2px white, 4px 4px #026958;
+}
+.form a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+.input-box input:focus {
+  box-shadow: 1px 1px 0 #0b63f6;
+}
